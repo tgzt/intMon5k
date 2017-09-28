@@ -7,8 +7,8 @@ ip=raw_input()
 
 my_headers = {'content-type': 'application/json-rpc'}
 url = "http://"+ip+"/ins"
-username = "admin"
-password = "ciscotme"
+username = "cisco"
+password = "cisco"
 
 showCmd = "show version"
 
