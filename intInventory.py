@@ -3,6 +3,8 @@
 import json
 import requests
 #
+import collections
+#
 
 ip = '192.168.1.15'
 
@@ -11,7 +13,7 @@ url = "http://"+ip+"/ins"
 username = "cisco"
 password = "cisco"
 
-intfDict = {}
+intfDict = collections.OrderedDict() # was {}
 
 showCmd = "show int desc"
 payload=[{"jsonrpc": "2.0",
