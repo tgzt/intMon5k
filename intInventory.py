@@ -1,4 +1,5 @@
-#Print Chassis info, Hostname and software version of a given switch.
+#!/usr/bin/env python2.7
+# create interface inventory
 import json
 import requests
 #
