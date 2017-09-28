@@ -1,0 +1,1 @@
+The support.txt file has setup information

@@ -1,0 +1,18 @@
+# Cisco Nexus 5500, 6000 and 7000 >= NX-OS 7.2
+#
+# Resource: http://jedelman.com/home/introduction-to-using-cisco-nx-api/
+# Resource: https://codingnetworker.com/2015/09/cisco-nx-api-nexus-5500/
+#
+# Resource: https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5000/sw/programmability/guide/b_Cisco_Nexus_5K6K_Series_NX-OS_Programmability_Guide.html
+#
+# Required:
+feature nxapi
+# (opt) nxapi http port 8080
+# (opt) nxapi http port 8081
+#
+show nxapi
+#
+# API Tool:
+nxapi sandbox
+# browse to the switch
+#
