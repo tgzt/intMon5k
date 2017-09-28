@@ -52,10 +52,23 @@ for element in response['result']['body']['TABLE_interface']['ROW_interface']:
         intfState = "UNKN"
     intfDict[intfName]['state'] = intfState
  
+for element in intfDict: #   print element,intfDict[element]['state'],intfDict[element]['desc']
+    if intfDict[element]['state'] == 'disabled':
+        intfDict[element]['newdesc'] = '[UNUSED]'
+    elif intfDict[element]['state'] == 'not connect':
+        intfDict[element]['newdesc'] = '[LINKDOWN]'
+    elif intfDict[element]['state'] == 'connected':
+        intfDict[element]['newdesc'] = '[UP]'
+    else:
+        intfDict[element]['newdesc'] = '[UNKNOWN]'
+        
+configCmd = ""
 for element in intfDict:
-    print element,intfDict[element]['state'],intfDict[element]['desc']
- 
-
-
+    #print element,intfDict[element]['state'],intfDict[element]['newdesc']
+    configCmd += 'interface %s ; desc %s ;' % (element, intfDict[element]['newdesc'])
+    
+configCmd += ' end '
+print configCmd
+    
         
 
