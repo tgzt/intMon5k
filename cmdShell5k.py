@@ -2,8 +2,9 @@
 import json
 import requests
 #
-print "enter ip address"
-ip=raw_input()
+#print "enter ip address"
+#ip=raw_input()
+ip = '192.168.1.15'
 
 my_headers = {'content-type': 'application/json-rpc'}
 url = "http://"+ip+"/ins"
